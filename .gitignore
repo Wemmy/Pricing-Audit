@@ -1,0 +1,5 @@
+Data/
+Results/
+test/
+.env
+data.sql
