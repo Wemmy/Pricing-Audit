@@ -1,4 +1,4 @@
-# Project Title: LSI Item Matcher
+# Product Classification based on LSI
 
 ## Description
 This project implements Latent Semantic Indexing (LSI) to effectively match items in transaction records to items listed in a pricing list. By leveraging the power of LSI, the project aims to reduce the ambiguity and enhance the accuracy of item identification, ensuring that transaction items are correctly priced according to the most relevant pricing list entries.
