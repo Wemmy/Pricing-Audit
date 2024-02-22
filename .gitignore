@@ -3,3 +3,4 @@ Results/
 test/
 .env
 data.sql
+__pycache__/

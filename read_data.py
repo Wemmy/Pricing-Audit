@@ -33,6 +33,12 @@ def get_pricing_list():
     df_list_OTG.rename(columns=cols_otg_map, inplace= True)
     df_list_Foundation.rename(columns=cols_foundation_map, inplace= True)
 
+    # data type conversion
+    type_convertion = {'Item_Code': 'string'}
+    df_list_CPG = df_list_CPG.astype(type_convertion)
+    df_list_OTG = df_list_CPG.astype(type_convertion)
+    df_list_Foundation = df_list_CPG.astype(type_convertion)
+
     # select useful columns
     cols = {'Category', 'Sub-Category', 'Brand', 'Item_Name', 'Item_Code', 'Size','ON&MB','QC','Others','ONHVP'}
     
@@ -241,7 +247,8 @@ def get_all_data():
     return df_list_ONMB, df_list_QC, df_list_others, df_list_ONHVP, df_pos_OM, df_pos_QC, df_pos_others, df_pos_OHVP
 
 if __name__ == '__main__':
-    pass
+    df = df_list_CPG = read_excel_file('./Data/Pricing_Lists.xlsx', sheet_name = 'CPG SRP', header_row = 1)
+    print(df[['SCC Code','UPC Code' ]][:10])
 
     
                                 
